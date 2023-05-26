@@ -148,9 +148,11 @@ class mcts():
     def take_actioin(self,sub_conscious):
         #咱也别输出动作了，就输出动作价值表吧，让外部自己去选。
 
+        # sub_conscious = self.sensory(peception)
         root = node(sub_conscious,parent = 0,root = 0,action = -1)
         root.root = root
 
+        # self.time_left = self.time_limit
         self.think(root)
         action = self.decide(root)
         return action
