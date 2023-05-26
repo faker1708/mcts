@@ -133,8 +133,6 @@ class mcts():
             value = self.rollout(virgin)
             self.back_propagate(virgin,value)
 
-
-            # self.time_left-=1
             time_left-=1
             if(time_left<=0):
                 break
